@@ -1,7 +1,6 @@
-import { GoogleGenAI } from "https://esm.sh/@google/genai@1.34.0";
+import { GoogleGenAI } from "https://esm.sh/@google/genai";
 
-// FIX: Initialized GoogleGenAI directly with process.env.API_KEY and removed manual checks,
-// per the library's guidelines which assume the key is always present in the environment.
+// Initialize Gemini with the provided API key
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getFashionFaqAnswer = async (question) => {
